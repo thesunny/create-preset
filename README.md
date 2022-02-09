@@ -1,8 +1,8 @@
 # `create-preset`
 
-Adds the dependencies and a `package.json` script to make `yarn preset ${nameOfPreset}` work with one command.
+Adds the dependencies and a `package.json` script to make `yarn preset ${nameOfPreset}` work.
 
-In a directory that has a `package.json`, execute:
+In any directory that has a `package.json`, enter the command:
 
 ```sh
 yarn preset @thesunny/preset
@@ -18,4 +18,4 @@ The `bin` for this project does a `yarn link @thesunny/presets` and then calls `
 
 ## Why not put the setup code in `@thesunny/presets`
 
-Unfortunately, `bin` commands don't work when you `yarn link` a package. It does work with `npm` but there is a bug in yarn that prevents this from working.
+Unfortunately, `bin` commands don't work when you `yarn link` a package. This seems to be an outstanding bug that doesn't look like it will be fixed soon. It does work with `npm` but would like to stay in the `yarn` ecosystem for now.
