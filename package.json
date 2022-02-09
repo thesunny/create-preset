@@ -1,6 +1,6 @@
 {
   "name": "@thesunny/create-preset",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "main": ".dist/src/index.js",
   "author": "Sunny Hirai <thesunny@gmail.com>",
   "license": "MIT",
