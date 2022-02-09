@@ -31,6 +31,7 @@
     "--- npm": "# npm package scripts",
     "build:npm:once": "rm -rf ./.dist/ && yarn test:once && tsc -p tsconfig.ts-build.json && echo 'Finished Building'",
     "build:npm:watch": "rm -rf ./.dist/ && tsc -p tsconfig.ts-build.json --watch",
+    "publish:npm": "yarn publish:npm:patch",
     "publish:npm:patch": "yarn build:npm:once && yarn version --patch && yarn publish --non-interactive || echo '\"npm publish --access=public\" to publish to npm'"
   },
   "types": ".dist/src/index.d.ts",
