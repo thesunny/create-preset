@@ -8,6 +8,27 @@ In any directory that has a `package.json`, enter the command:
 yarn preset @thesunny/preset
 ```
 
+## If it's not working
+
+If the preset isn't working and you just need to get it to work, do this:
+
+```sh
+yarn link @thesunny/presets
+
+node node_modules/@thesunny/presets/bin/setup.js
+```
+
+Add this to the scripts part of `package.json`
+
+```json
+{
+  "scripts": {
+    "-- preset": "# Run preset from @thesunny/presets",
+    "preset": "ts-node --project node_modules/@thesunny/presets/tsconfig.ts-node.json node_modules/@thesunny/presets/bin/index.ts"
+  }
+}
+```
+
 ## How it works
 
 The command above works because calling `yarn something` will automatically install a package with the name of the argument preceded by `create-` so `something` will become `create-something`.
