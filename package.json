@@ -1,12 +1,14 @@
 {
   "name": "@thesunny/create-preset",
-  "version": "0.1.9",
+  "version": "0.1.11",
   "main": ".dist/src/index.js",
   "author": "Sunny Hirai <thesunny@gmail.com>",
   "license": "MIT",
   "bin": ".dist/src/index.js",
+  "dependencies": {
+    "@thesunny/script-utils": "^0.2.2"
+  },
   "devDependencies": {
-    "@thesunny/script-utils": "^0.2.2",
     "@types/jest": "^27.4.0",
     "@types/node": "^18.11.18",
     "jest": "^27.5.1",
@@ -26,7 +28,7 @@
     "build:npm:once": "rm -rf ./.dist/ && yarn test:once && tsc -p tsconfig.ts-build.json && echo 'Finished Building'",
     "build:npm:watch": "rm -rf ./.dist/ && tsc -p tsconfig.ts-build.json --watch",
     "publish:npm": "yarn publish:npm:patch",
-    "publish:npm:patch": "yarn build:npm:once && yarn version --patch && yarn publish --non-interactive || echo '\"npm publish --access=public\" to publish to npm'",
+    "publish:npm:patch": "yarn build:npm:once && yarn npm publish --access=public || echo '\"npm publish --access=public\" to publish to npm'",
     "--- setup": "# execute the src/index.ts script",
     "setup": "ts-node src/index.ts",
     "--- test": "#",
