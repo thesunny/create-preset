@@ -29,6 +29,15 @@ Add this to the scripts part of `package.json`
 }
 ```
 
+```json
+{
+  "scripts": {
+    "-- preset": "# Run preset from @thesunny/presets",
+    "preset": "ts-node --project $HOME/presets/tsconfig.ts-node.json $HOME/presets/bin/index.ts"
+  }
+}
+```
+
 ## How it works
 
 The command above works because calling `yarn something` will automatically install a package with the name of the argument preceded by `create-` so `something` will become `create-something`.
