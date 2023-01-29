@@ -1,13 +1,14 @@
 {
   "name": "@thesunny/create-preset",
   "version": "0.1.12",
-  "main": ".dist/src/index.js",
-  "author": "Sunny Hirai <thesunny@gmail.com>",
   "license": "MIT",
+  "author": "Sunny Hirai <thesunny@gmail.com>",
+  "files": [
+    ".dist/**/*"
+  ],
+  "main": ".dist/src/index.js",
+  "types": ".dist/src/index.d.ts",
   "bin": ".dist/src/index.js",
-  "dependencies": {
-    "@thesunny/script-utils": "^0.2.2"
-  },
   "devDependencies": {
     "@types/jest": "^27.4.0",
     "@types/node": "^18.11.18",
@@ -18,6 +19,9 @@
     "tsc": "^2.0.4",
     "tsconfig-paths": "^4.1.2",
     "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "@thesunny/script-utils": "^0.2.2"
   },
   "scripts": {
     "-- fix": "# fix syntax",
@@ -39,9 +43,5 @@
     "-- preset": "# Run preset from @thesunny/presets",
     "preset": "ts-node --project $HOME/presets/tsconfig.ts-node.json $HOME/presets/bin/index.ts",
     "-- end": "# end"
-  },
-  "types": ".dist/src/index.d.ts",
-  "files": [
-    ".dist/**/*"
-  ]
+  }
 }
