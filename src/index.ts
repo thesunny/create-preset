@@ -72,6 +72,12 @@ utils.pass("Passed")
 
 // exec("yarn link @thesunny/presets")
 
+utils.writeFile(
+  ".yarnrc.yml",
+  `# Easier to view source. Also required to work with presets.
+nodeLinker: node-modules`
+)
+
 /**
  * Execute the `bin/setup.js` file.
  */
